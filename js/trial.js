@@ -33,12 +33,12 @@ const renderToScreen = function ( boxId ){
 
 
 
-const reset = function (){
-  board =["-", "-", "-",
-            "-", "-", "-",
-            "-", "-", "-" ];
-  renderToScreen();
-};
+// const reset = function (){
+//   board =["-", "-", "-",
+//             "-", "-", "-",
+//             "-", "-", "-" ];
+//   renderToScreen();
+// };
 
 
 
