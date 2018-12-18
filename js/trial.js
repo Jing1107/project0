@@ -12,6 +12,7 @@ $(document).ready(function (){
   });
 });
 
+
 let turnsPlayed = 0;
 let playOneIsNext = true;
 let boxId = 0;
@@ -42,8 +43,11 @@ const reset = function (){
 
 
 const playTurn = function(num) {
+  // if (board [num] === "X" || board [num] === "0" ) {
+  //   return;
+  // }
   if (playOneIsNext) {
-    board [num ] = "X"
+    board [num] = "X"
     renderToScreen ();
     turnsPlayed = turnsPlayed + 1;
     playOneIsNext = false
