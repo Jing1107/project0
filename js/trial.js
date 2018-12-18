@@ -43,9 +43,9 @@ const renderToScreen = function ( boxId ){
 
 
 const playTurn = function(num) {
-  // if (board [num] === "X" || board [num] === "0" ) {
-  //   return;
-  // }
+  if (board [num] === "X" || board [num] === "0" ) {
+    return;
+  }
   if (playOneIsNext) {
     board [num] = "X"
     renderToScreen ();
