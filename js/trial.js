@@ -33,19 +33,20 @@ const renderToScreen = function ( boxId ){
 
 
 
-// const reset = function (){
-//   board =["-", "-", "-",
-//             "-", "-", "-",
-//             "-", "-", "-" ];
-//   renderToScreen();
-// };
+const reset = function (){
+  board =["-", "-", "-",
+            "-", "-", "-",
+            "-", "-", "-" ];
+  renderToScreen();
+};
 
 
 
 const playTurn = function(num) {
-  if (board [num] === "X" || board [num] === "0" ) {
-    return;
+  if (board [num] === "X" || board [num] === "O") {
+    return ;
   }
+
   if (playOneIsNext) {
     board [num] = "X"
     renderToScreen ();
@@ -59,15 +60,17 @@ const playTurn = function(num) {
     }
 
   } else {
+
     board [num ] = "O"
     renderToScreen ();
     turnsPlayed = turnsPlayed + 1;
-    //playTwoIsNext = "true"
+    //playTwoIsNext = true
     playOneIsNext = true
     checkForWin ("O")
   }
   //checkForWin ()
 }
+
 
 
 
