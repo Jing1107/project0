@@ -15,39 +15,41 @@ $(document).ready(function (){
 
 let turnsPlayed = 0;
 let playOneIsNext = true;
-let boxId = 0;
-let xWin = 0;
-let oWin = 0;
+// let boxId = 0;
+// let xWin = 0;
+// let oWin = 0;
 
 let board =["-", "-", "-",
           "-", "-", "-",
           "-", "-", "-" ];
 
-const renderToScreen = function ( boxId ){
+const renderToScreen = function ( boxId ){   //put contecnt into board
   for (var i = 0; i < board.length; i++) {
     $('#' + i).text(board[i])
-    console.log (board[i])
+    //console.log (board[i])
   }
 //liesten click
 }
 
 
 
-const reset = function (){
+const reset = function (){ // reset game
   board =["-", "-", "-",
             "-", "-", "-",
             "-", "-", "-" ];
+  turnsPlayed = 0; // clear origin playturn
   renderToScreen();
+  //location.reload(); //
 };
 
 
 
 const playTurn = function(num) {
-  if (board [num] === "X" || board [num] === "O") {
-    return ;
+  if (board [num] === "X" || board [num] === "O") { //check is there x or o in cureent board, if there is x or o in board,
+    return ;        // you cannot change to other value.
   }
 
-  if (playOneIsNext) {
+  if (playOneIsNext) { //player x turn, when value is true will go to next line.
     board [num] = "X"
     renderToScreen ();
     turnsPlayed = turnsPlayed + 1;
@@ -93,7 +95,7 @@ const checkForWin = function (player) {
 }
 
 
-$(document).ready( function() {
+$(document).ready( function() { //主程序，当玩家点击任意board的时候，运行playturn的function，直到该function结束。
   //console.log("ready");
 
   $('#0').click( function () {
@@ -122,5 +124,8 @@ $(document).ready( function() {
   })
   $('#8').click( function () {
     playTurn(8)
+  })
+  $('.reset').click( function(){
+    reset()
   })
 })
