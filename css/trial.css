@@ -56,12 +56,6 @@ aside img {
 }
 
 .box-wrap>div {
-  /*width: 31%;
-  padding-bottom: 31%;
-  margin: 1%;
-  border-radius: 10%;
-  float: left;
-  background-color: orange;*/
   margin: 1%;
   width: 31%;
   border-radius: 10%;
@@ -76,16 +70,31 @@ aside img {
   line-height: 200px;
 }
 
+.buttonWrapper {
+  /*position: absolute;*/
+  width: 960px;
+}
+
 .reset {
+  position: relative;
+  left: 38.5%;
   background-color: #4CAF50; /* Green */
   border: none;
   color: white;
   padding: 15px 32px;
-  text-align: center;
   text-decoration: none;
-  display: inline-block;
+  /*display: inline-block;*/
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+  -webkit-transition:width 2s, height 2s,
+        background-color 2s, -webkit-transform 2s;
+}
 
+.reset:hover {
+    background-color: #FFCCCC;
+    width:100px;
+    height:100px;
+    -webkit-transform:rotate(180deg);
+    transform:rotate(180deg);
 }
