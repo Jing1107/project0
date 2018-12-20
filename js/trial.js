@@ -89,7 +89,7 @@ const checkForWin = function (player1, player2) {
 
   ) {
     //$('.winner').text(`${player1} WINS !`)
-    $('.winner').html(`${player1} is a winner!`).fadeIn().fadeOut(5000);
+    $('.winner').html(`${player1} is winner!`).fadeIn().fadeOut(5000);
     return true;
 
   } else if (
@@ -103,7 +103,7 @@ const checkForWin = function (player1, player2) {
     (board[2] === player2 && board[4] === player2 && board[6] === player2)
   ){
     //$('.winner').text(`${player2} WINS !`)
-    $('.winner').html(` ${player2} is a winner!`).fadeIn().fadeOut(5000);
+    $('.winner').html(` ${player2} is winner!`).fadeIn().fadeOut(5000);
     return true;
 
   } else {
