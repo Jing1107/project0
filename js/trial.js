@@ -23,6 +23,9 @@ let board =["-", "-", "-",
 let player1 = "X";
 let player2 = "O";
 
+// let player1 = $('#player1').html("X");
+// let player2 = $('#player2').html("O");
+
 const renderToScreen = function ( boxId ){   //put contecnt into board
   for (var i = 0; i < board.length; i++) {
     $('#' + i).text(board[i])
@@ -34,12 +37,12 @@ const renderToScreen = function ( boxId ){   //put contecnt into board
 
 
 const reset = function (){ // reset game
-  board =["-", "-", "-",
-            "-", "-", "-",
-            "-", "-", "-" ];
-  turnsPlayed = 0; // clear origin playturn
-  renderToScreen();
-  //location.reload();
+  // board =["-", "-", "-",
+  //           "-", "-", "-",
+  //           "-", "-", "-" ];
+  // turnsPlayed = 0; // clear origin playturn
+  // renderToScreen();
+  location.reload();
 };
 
 
@@ -58,7 +61,9 @@ const playTurn = function(num) {
     //checkForWin ("X")
     checkForWin (player1)
 
-    if ( turnsPlayed  === 9 && (checkForWin("X") !== true) ) {
+    //if (checkForWin(player1) !== true && checkForWin(player2) !== true ){
+    if ( turnsPlayed  === 9 && (checkForWin(player1) !== true) ){
+    //if ( turnsPlayed  === 9 && (checkForWin("X") !== true) ) {
       //console.log("draw");
       alert("Oh no, it's a draw")
     }
