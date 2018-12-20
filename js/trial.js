@@ -31,15 +31,15 @@ const renderToScreen = function ( boxId ){   //put contecnt into board
   }//liesten click
 }
 
-// const playerX = function (num) {
-//    //console.log(player1);
-//    board[num] = player1;
-// }
-//
-// const playerO = function (num) {
-//   //console.log(player2);
-//   board[num] = player2;
-// }
+const playerX = function (num) {
+   //console.log(player1);
+   board[num] = player1;
+}
+
+const player0 = function (num) {
+  //console.log(player2);
+  board[num] = player2;
+}
 
 const reset = function (){ // reset game
   board =["-", "-", "-",
@@ -151,5 +151,11 @@ $(document).ready( function() { //主程序，当玩家点击任意board的时�
   })
   $('.reset').click( function(){
     reset()
+  })
+  $('#playerX').click( function (){
+    playerX(1)
+  })
+  $('#playerO').click( function (){
+    playerO(1)
   })
 })
