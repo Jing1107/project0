@@ -43,6 +43,7 @@ const playTurn = function(num) {
 
   if (playerOne) { //player x turn, when value is true will go to next line.
     board [num] = player1;
+    $('#player')[0].play();
     renderToScreen ();
     turnsPlayed = turnsPlayed + 1;
     playerOne = false
@@ -62,6 +63,7 @@ const playTurn = function(num) {
 
   } else {
     board [num] = player2;
+    $('#player')[0].play();
     renderToScreen ();
     turnsPlayed = turnsPlayed + 1;
     playerOne = true
@@ -89,6 +91,7 @@ const checkForWin = function (player1, player2) {
 
   ) {
     //$('.winner').text(`${player1} WINS !`)
+    $('#winner')[0].play();
     $('.winner').html(`${player1} is winner!`).fadeIn().fadeOut(5000);
     return true;
 
@@ -103,7 +106,9 @@ const checkForWin = function (player1, player2) {
     (board[2] === player2 && board[4] === player2 && board[6] === player2)
   ){
     //$('.winner').text(`${player2} WINS !`)
+    $('#winner')[0].play();
     $('.winner').html(` ${player2} is winner!`).fadeIn().fadeOut(5000);
+
     return true;
 
   } else {
