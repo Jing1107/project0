@@ -10,7 +10,7 @@ $(document).ready(function (){
     const bgColor = `rgb(${randomColor()}, ${randomColor()}, ${randomColor()})`;
     $('h1').css('background-color', bgColor);
   });
-});
+}); // make h1 colorful
 
 
 let turnsPlayed = 0;
@@ -23,28 +23,23 @@ let board =["-", "-", "-",
 let player1 = "X";
 let player2 = "O";
 
-// let player1 = $('#player1').html("X");
-// let player2 = $('#player2').html("O");
-
-// $("#player1").click(function(){
-//   //$(":text").val("Hello World");
-//   return player1;
-// });
-//
-// $("#player2").click(function(){
-//   //$(":text").val("Hello World");
-//   return player2;
-// });
 
 const renderToScreen = function ( boxId ){   //put contecnt into board
   for (var i = 0; i < board.length; i++) {
     $('#' + i).text(board[i])
     //console.log (board[i])
-  }
-//liesten click
+  }//liesten click
 }
 
-
+// const playerX = function (num) {
+//    //console.log(player1);
+//    board[num] = player1;
+// }
+//
+// const playerO = function (num) {
+//   //console.log(player2);
+//   board[num] = player2;
+// }
 
 const reset = function (){ // reset game
   board =["-", "-", "-",
@@ -63,30 +58,27 @@ const playTurn = function(num) {
   }
 
   if (playerOne) { //player x turn, when value is true will go to next line.
-    //board [num] = "X"
     board [num] = player1;
+    //board [num] = playerX;
     renderToScreen ();
     turnsPlayed = turnsPlayed + 1;
     playerOne = false
-    //checkForWin ("X")
     checkForWin (player1)
+    //checkForWin (playerX)
 
-    //if (checkForWin(player1) !== true && checkForWin(player2) !== true ){
+
     if ( turnsPlayed  === 9 && (checkForWin(player1) !== true) ){
-    //if ( turnsPlayed  === 9 && (checkForWin("X") !== true) ) {
-      //console.log("draw");
       alert("Oh no, it's a draw")
     }
 
   } else {
-    //board [num ] = "O"
     board [num] = player2;
+    //board [num] = playerO;
     renderToScreen ();
     turnsPlayed = turnsPlayed + 1;
-    //playTwoIsNext = true
     playerOne = true
-    //checkForWin ("O")
     checkForWin (player2)
+    //checkForWin (playerO)
   }
 }
 
