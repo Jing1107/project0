@@ -26,6 +26,16 @@ let player2 = "O";
 // let player1 = $('#player1').html("X");
 // let player2 = $('#player2').html("O");
 
+// $("#player1").click(function(){
+//   //$(":text").val("Hello World");
+//   return player1;
+// });
+//
+// $("#player2").click(function(){
+//   //$(":text").val("Hello World");
+//   return player2;
+// });
+
 const renderToScreen = function ( boxId ){   //put contecnt into board
   for (var i = 0; i < board.length; i++) {
     $('#' + i).text(board[i])
@@ -37,12 +47,12 @@ const renderToScreen = function ( boxId ){   //put contecnt into board
 
 
 const reset = function (){ // reset game
-  // board =["-", "-", "-",
-  //           "-", "-", "-",
-  //           "-", "-", "-" ];
-  // turnsPlayed = 0; // clear origin playturn
-  // renderToScreen();
-  location.reload();
+  board =["-", "-", "-",
+            "-", "-", "-",
+            "-", "-", "-" ];
+  turnsPlayed = 0; // clear origin playturn
+  renderToScreen();
+  //location.reload();
 };
 
 
@@ -97,7 +107,7 @@ const checkForWin = function (player1, player2) {
   ) {
     //console.log("winner");
     alert (`winner is ${player1}`)
-    //return true;
+    return true;
   } else if (
     (board[0] === player2 && board[1] === player2 && board[2] === player2) ||
     (board[3] === player2 && board[4] === player2 && board[5] === player2) ||
@@ -109,6 +119,9 @@ const checkForWin = function (player1, player2) {
     (board[2] === player2 && board[4] === player2 && board[6] === player2)
   ){
     alert (`winner is ${player2}`)
+    return true;
+  } else {
+    return false;
   }
 
 };
