@@ -19,7 +19,7 @@ The basic requirement is to have the game switch turns between X and 0 and visua
 
 
 ### Bonus functionality:
-- [ ] Animations including an looping gradient background
+- [x] Animations including an looping gradient background
 
 - [x] Fade in and fade out of player icons
 
