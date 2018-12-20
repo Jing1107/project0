@@ -21,7 +21,7 @@ The basic requirement is to have the game switch turns between X and 0 and visua
 ### Bonus functionality:
 - [ ] Animations including an looping gradient background
 
-- [ ] Fade in and fade out of player icons
+- [x] Fade in and fade out of player icons
 
 - [x]Modal displaying which player has won and a restart     button
 
@@ -31,3 +31,5 @@ Review code and make it DRYer
 Ability for players to customise their tokens
 
 Adding AI version for only one player
+
+Automation of reset once the game has finished

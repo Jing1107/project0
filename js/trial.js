@@ -56,8 +56,8 @@ const playTurn = function(num) {
 
 
     if ( turnsPlayed  === 9 && (checkForWin(player1) !== true) ){
-      alert("Oh no, it's a draw")
-      //$('.winner').text(`${ player } wins!`)
+      //alert("Oh no, it's a draw")
+      $('.draw').text("Oh no, it's a draw").fadeIn().fadeOut(5000)
     }
 
   } else {
@@ -88,7 +88,8 @@ const checkForWin = function (player1, player2) {
     (board[2] === player1 && board[4] === player1 && board[6] === player1)
 
   ) {
-    $('.winner').text(`${player1} WINS !`)
+    //$('.winner').text(`${player1} WINS !`)
+    $('.winner').html(`${player1} is a winner!`).fadeIn().fadeOut(5000);
     return true;
 
   } else if (
@@ -101,7 +102,8 @@ const checkForWin = function (player1, player2) {
     (board[0] === player2 && board[4] === player2 && board[8] === player2) ||
     (board[2] === player2 && board[4] === player2 && board[6] === player2)
   ){
-    $('.winner').text(`${player2} WINS !`)
+    //$('.winner').text(`${player2} WINS !`)
+    $('.winner').html(` ${player2} is a winner!`).fadeIn().fadeOut(5000);
     return true;
 
   } else {

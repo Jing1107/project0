@@ -41,12 +41,30 @@ h1 {
 }
 
 h2 {
-  font-family: 'B612 Mono', monospace;
-  color:rgb(38, 112, 223);
-  font-size:55px;
+  display: none;
+  font-size: 10vw;
+  align-items:center;
+  justify-content: center;
+  color: pink;
+  width:100%;
   text-align: center;
+  left: 0;
+  position: absolute;
+  background-color: rgba(6, 6, 6, 0.7);
 }
 
+h3 {
+  display: none;
+  font-size: 10vw;
+  align-items:center;
+  justify-content: center;
+  color: pink;
+  width:100%;
+  text-align: center;
+  left: 0;
+  position: absolute;
+  background-color: rgba(6, 6, 6, 0.7);
+}
 
 .container {
   max-width: 960px; /* lazy reponsiveness */
