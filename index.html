@@ -9,9 +9,16 @@
     <link rel="icon" href="img/blackpaw.ico" type="image/x-icon" />
 </head>
 <body>
+
+
     <div class="container">
-      <h1> Tic tac tac tac</h1>
-        <h2> lalalalalal</h2>
+     <!--<div class="buttonDiv">
+         <button class="button" id= "x" onclick="xPlayer()">X</button>
+         <button class="button" id= "o" onclick="oPlayer()">O</button>
+      </div>-->
+      <h1> Tic-Tac-Toe</h1>
+      <h2 class="winner"></h2>
+
       <div class="box-wrap">
         <div class="box"id="0"><p></p></div>
         <div class="box"id="1"><p></p></div>
@@ -35,11 +42,6 @@
       </div>
       <div class='bottonWrapper'>
         <button class="reset" onclick="reset()">Reset</button>
-      </div>
-
-      <div class="player">
-        <button id="playerX" onclick="playerX()"> Player X </button>
-        <button id="playerO" onclick="playerO()"> Player O </button>
       </div>
   </body>
 </html>
