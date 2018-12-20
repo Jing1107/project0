@@ -58,6 +58,7 @@ const playTurn = function(num) {
 
     if ( turnsPlayed  === 9 && (checkForWin(player1) !== true) ){
       //alert("Oh no, it's a draw")
+      $('#draw')[0].play();
       $('.draw').text("Oh no, it's a draw").fadeIn().fadeOut(5000)
     }
 
