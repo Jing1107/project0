@@ -23,7 +23,7 @@ The basic requirement is to have the game switch turns between X and 0 and visua
 
 - [x] Fade in and fade out of player icons
 
-- [x]Modal displaying which player has won and a restart     button
+- [x]Modal displaying which player has won and a restart button
 
 ### Future improvements:
 Review code and make it DRYer
