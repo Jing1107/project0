@@ -129,6 +129,15 @@ const reset = function (){ // reset game
 
 $(document).ready( function() { //主程序，当玩家点击任意board的时候，运行playturn的function，直到该function结束。
   //console.log("ready");
+  $('#x').click (function () {
+    player1 = 'X'
+    player2 = 'O'
+  })
+
+  $('#o').click (function () {
+    player1 = 'O'
+    player2 = 'X'
+  })
 
   $('#0').click( function () {
     playTurn(0)
