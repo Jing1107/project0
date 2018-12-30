@@ -49,13 +49,6 @@ const playTurn = function(num) {
     playerOne = false
     checkForWin (player1)
 
-  // if (board[num] === " ") {
-  // if (playerOne === true ) {
-  // xPlayer(num);
-  // turnsPlayed += 1;
-  // playerOne = false;
-
-
     if ( turnsPlayed  === 9 && (checkForWin(player1) !== true) ){
       //alert("Oh no, it's a draw")
       $('#draw')[0].play();
@@ -69,10 +62,6 @@ const playTurn = function(num) {
     turnsPlayed = turnsPlayed + 1;
     playerOne = true
     checkForWin (player2)
-
-    // oPlayer(num);
-    // turnsPlayed += 1;
-    // playerOne = true;
   }
 }
 
