@@ -1,8 +1,86 @@
-/** {
-  border: 1px solid green;
-}*/
 @import url('https://fonts.googleapis.com/css?family=Quicksand|ZCOOL+XiaoWei');
 @import url('https://fonts.googleapis.com/css?family=Acme|Anton|B612+Mono');
+
+@media screen and (max-width: 991px) {
+  .container {
+    display: grid;
+    width: auto;
+    height: auto;
+  }
+
+  body {
+    width: 33.3%;
+    display: inline-block;
+  }
+  aside {
+    display: none !important;
+  }
+  aside img {
+    display: none;
+  }
+
+  .reset {
+    /* display: bottom !important; */
+    margin: 400px 250px !important;
+    margin-top: 50px !important;
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    display: grid;
+    width: auto;
+    height: auto;
+  }
+
+  body {
+    width: 33.3%;
+    display: inline-block;
+  }
+  aside {
+    display: none !important;
+  }
+  aside img {
+    display: none;
+  }
+
+  .reset {
+    /* display: bottom !important; */
+    margin: 400px 250px !important;
+    margin-top: 50px !important;
+  }
+
+}
+
+@media screen and (max-width: 479px) {
+  .container {
+    display: grid;
+    width: auto;
+    height: auto;
+  }
+  body {
+    width: 33.3%;
+    display: inline-block;
+  }
+  aside {
+    display: none !important;
+  }
+  aside img {
+    display: none;
+  }
+
+  .button {
+    width: 10rem !important;
+  }
+
+  .reset {
+    /* display: bottom !important; */
+    margin: 400px 250px !important;
+    margin-top: 50px !important;
+  }
+}
+
 
 .buttonDiv  {
   display: flex;
@@ -69,7 +147,7 @@ h3 {
 .container {
   max-width: 960px; /* lazy reponsiveness */
   margin: 0 auto;
-  background-color: white;
+  /* background-color: white; */
   padding: 1em;
   background: -webkit-linear-gradient(70deg, #fffc91  30%, rgba(0,0,0,0) 30%), -webkit-linear-gradient(30deg, #9cf9c5 60%, #f99fe5 60%);
   background: -o-linear-gradient(70deg, #fffc91  30%, rgba(0,0,0,0) 30%), -o-linear-gradient(30deg, #9cf9c5 60%, #f99fe5 60%);
