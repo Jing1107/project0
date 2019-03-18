@@ -4,8 +4,7 @@
 @media screen and (max-width: 991px) {
   .container {
     display: grid;
-    width: auto;
-    height: auto;
+    width: 900px;
   }
 
   body {
@@ -30,8 +29,7 @@
 @media screen and (max-width: 767px) {
   .container {
     display: grid;
-    width: auto;
-    height: auto;
+    width: 650px;
   }
 
   body {
@@ -42,12 +40,12 @@
     display: none !important;
   }
   aside img {
-    display: none;
+    display: none !important;
   }
 
   .reset {
     /* display: bottom !important; */
-    margin: 400px 250px !important;
+    margin: 300px 180px !important;
     margin-top: 50px !important;
   }
 
@@ -56,8 +54,7 @@
 @media screen and (max-width: 479px) {
   .container {
     display: grid;
-    width: auto;
-    height: auto;
+    width: 460px;
   }
   body {
     width: 33.3%;
