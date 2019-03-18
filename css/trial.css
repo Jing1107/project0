@@ -4,7 +4,7 @@
 @media screen and (max-width: 991px) {
   .container {
     display: grid;
-    width: 900px;
+    width: 900px !important;
   }
 
   body {
@@ -29,7 +29,7 @@
 @media screen and (max-width: 767px) {
   .container {
     display: grid;
-    width: 650px;
+    width: 650px !important;
   }
 
   body {
