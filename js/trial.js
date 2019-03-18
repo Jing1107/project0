@@ -1,10 +1,10 @@
-console.log('wow');
+console.log('Thanks for viewing my code, the responsiveness is on progress');
 
 $(document).ready(function (){
   const randomColor = function () {
     return Math.random() * 255;
   }
-  console.log(randomColor());
+  // console.log(randomColor());
 
   $(window).on('mousemove',function (){
     const bgColor = `rgb(${randomColor()}, ${randomColor()}, ${randomColor()})`;
